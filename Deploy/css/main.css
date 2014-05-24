@@ -15,13 +15,7 @@ header{
     width: 950px;
     position: absolute; 
     top: 60px;
-    left: -300px; 
-/*    position: fixed;
-    top: 30%;
-    left: 31%;
-    margin-top: -50px;
-    margin-left: -100px*/
-    /*margin-left: -20%;*/
+    left: -310px; 
 }
 #studios{
     position: absolute;
@@ -29,4 +23,29 @@ header{
     font-size: 70px;
     margin-left: 65%;
     margin-top: -30px
+}
+#moto{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    left: 32%;  
+    bottom: 0;
+    padding-bottom: 30px;
+}
+.button{
+    color: #6AA7F0;
+    background-color: #D3D3D3;
+
+    border-style:solid;
+    border-width:3px;
+    border-color: darkgrey;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+
+    padding: 5px;
+    display: inline-block;
+    
+    font-size: 20px;
+    font-weight: bold;
 }

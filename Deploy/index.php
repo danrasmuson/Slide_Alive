@@ -13,6 +13,9 @@
         slide &nbsp;&nbsp;&nbsp;&nbsp;alive <div id="studios">studios</div>
         </header>
     </div>
+    <div id="moto">making your presentations fast and effective - 
+        <a href="create.php"><div class="button">try now</div></a>
+    </div>
 
 </body>
 </html>
