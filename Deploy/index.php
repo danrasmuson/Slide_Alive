@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SlideAlive Studios</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/homepage.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 <body>

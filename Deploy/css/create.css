@@ -1,0 +1,41 @@
+body{
+    background-color: #82BBD7;
+}
+/*#content{
+    padding-left: 25%;
+    margin-top: 10%;
+    display: inline-block;
+}
+*/
+#logo{
+    /*position: absolute;*/
+    width: 120px;
+    height: 120px;
+    background-color: #20507B;
+    border-radius: 50%;
+
+    border-style:solid;
+    border-width:5px;
+    border-color: #8497b0;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+#logo img{
+    /*position: absolute;*/
+    width: 50px;
+    padding-left: 35px;
+    padding-top: 10px;
+}
+#content textarea{
+    /*position: absolute;*/
+    /*margin-top: 45px;*/
+    /*margin-left: 125px;*/
+    width: 600px;
+
+    border-style:solid;
+    border-width:5px;
+    border-color: #8497b0;
+
+    border-left-width: 30px
+}
