@@ -1,19 +1,17 @@
-body{
+body {
     background-color: #82BBD7;
 }
-/*#content{
-    padding-left: 25%;
-    margin-top: 10%;
+#content {
     display: inline-block;
-}
-*/
-#logo{
+    margin:0 auto;
     /*position: absolute;*/
+    /*bottom: 50%;*/
+}
+#logo {
     width: 120px;
     height: 120px;
     background-color: #20507B;
     border-radius: 50%;
-
     border-style:solid;
     border-width:5px;
     border-color: #8497b0;
@@ -21,21 +19,15 @@ body{
     -moz-border-radius: 100px;
     border-radius: 100px;
 }
-#logo img{
-    /*position: absolute;*/
-    width: 50px;
-    padding-left: 35px;
+#logo img {
+    width: 80px;
+    padding-left: 32px;
     padding-top: 10px;
 }
-#content textarea{
-    /*position: absolute;*/
-    /*margin-top: 45px;*/
-    /*margin-left: 125px;*/
+#content textarea {
     width: 600px;
-
+    height: 200px;
     border-style:solid;
     border-width:5px;
     border-color: #8497b0;
-
-    border-left-width: 30px
 }

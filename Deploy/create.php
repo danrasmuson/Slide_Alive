@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Create a SlideAlive Presentation</title>
-    <!-- <link rel="stylesheet" href="css\create.css"> -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css\create.css">
     <script type="text/javascript" src="js/textArea.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </head>
 <body>
     <div id="content" class="row">
         <div class="col-md-8 col-md-offset-2">
-            <table><tr><td><a href="review.html"><div id="logo"><img src="img/logoPNG.png" alt=""></div></a></td>
-            <td><textarea onkeyup="textAreaAdjust(this)" style="overflow:hidden"></textarea></td></tr></table>
+            <table>
+                <tr>
+                    <td><a href="review.html"><div id="logo"><img src="img/logoPNG.png" alt=""></div></a></td>
+
+                    <td width="100%">
+                        <form class="form-inlilne">
+                            <textarea onkeyup="textAreaAdjust(this)" style="overflow:hidden; width: 100%;" placeholder="Enter Text for the Slidshow"></textarea>
+                        </form>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     </div>
