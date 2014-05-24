@@ -2,6 +2,31 @@ body{
     background-color: #20507B;
     font-family: 'Roboto', sans-serif;
 }
+#title{
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
 header{
-    
+    color: white;
+    font-size: 150px;
+    width: 950px;
+    position: absolute; 
+    top: 60px;
+    left: -300px; 
+/*    position: fixed;
+    top: 30%;
+    left: 31%;
+    margin-top: -50px;
+    margin-left: -100px*/
+    /*margin-left: -20%;*/
+}
+#studios{
+    position: absolute;
+    color: #68809E;
+    font-size: 70px;
+    margin-left: 65%;
+    margin-top: -30px
 }
