@@ -16,9 +16,11 @@
                     <td><a href="review.html"><div id="logo"><img src="img/logoPNG.png" alt=""></div></a></td>
 
                     <td width="100%">
-                        <form class="form-inlilne">
-                            <textarea onkeyup="textAreaAdjust(this)" style="overflow:hidden; width: 100%;" placeholder="Enter Text for the Slidshow"></textarea>
+                        <form class="form-inline" method="get" action="http://sa.lbsg.net/api.php">
+                            <textarea onkeyup="textAreaAdjust(this)" id="input" style="overflow:hidden; width: 100%;" placeholder="Enter Text for the Slidshow"></textarea>
+                            <input type="submit">
                         </form>
+
                     </td>
                 </tr>
             </table>
