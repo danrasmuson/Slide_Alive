@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css\create.css">
     <script type="text/javascript" src="js/textArea.js"></script>
     <script src="js/bootstrap.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div id="content" class="row">
@@ -18,7 +19,7 @@
                     <td width="100%">
                         <form class="form-inline" method="get" action="http://sa.lbsg.net/api.php">
                             <textarea onkeyup="textAreaAdjust(this)" name="input" style="overflow:hidden; width: 100%;" placeholder="Enter Text for the Slidshow"></textarea>
-                            <input type="submit">
+                            <input type="submit" value="done" class="button">
                         </form>
 
                     </td>

@@ -4,8 +4,6 @@ body {
 #content {
     display: inline-block;
     margin:0 auto;
-    /*position: absolute;*/
-    /*bottom: 50%;*/
 }
 #logo {
     width: 120px;
@@ -25,9 +23,27 @@ body {
     padding-top: 10px;
 }
 #content textarea {
-    width: 600px;
-    height: 200px;
     border-style:solid;
     border-width:5px;
     border-color: #8497b0;
+}
+.button{
+    color: #6AA7F0;
+    background-color: #deebf7;
+    font-family: 'Roboto', sans-serif;
+
+    float: right;
+
+    border-style:solid;
+    border-width:3px;
+    border-color: #8497b0;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+
+    padding: 5px;
+    display: inline-block;
+    
+    font-size: 20px;
+    font-weight: bold;
 }
