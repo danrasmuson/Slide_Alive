@@ -17,7 +17,7 @@
 
                     <td width="100%">
                         <form class="form-inline" method="get" action="http://sa.lbsg.net/api.php">
-                            <textarea onkeyup="textAreaAdjust(this)" id="input" style="overflow:hidden; width: 100%;" placeholder="Enter Text for the Slidshow"></textarea>
+                            <textarea onkeyup="textAreaAdjust(this)" name="input" style="overflow:hidden; width: 100%;" placeholder="Enter Text for the Slidshow"></textarea>
                             <input type="submit">
                         </form>
 
