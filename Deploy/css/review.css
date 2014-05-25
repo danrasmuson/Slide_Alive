@@ -43,6 +43,8 @@ span img {
     height: 250px;
     width: 350px;
     vertical-align:top;
+
+    box-shadow: 5px 5px 10px #454741;
 }
 .dark:after {
     content:'';
