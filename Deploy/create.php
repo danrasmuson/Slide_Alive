@@ -14,7 +14,10 @@
         <div class="col-md-8 col-md-offset-2">
             <table>
                 <tr>
-                    <td><a href="review.html"><div id="logo"><img src="img/logoPNG.png" alt=""></div></a></td>
+                    <td id="greyBackground" onkeyup="textAreaAdjust(this)">
+                        <div id="logo"><img src="img/logoPNG.png" alt=""></div>
+                        <div id="nullBox"></div>
+                    </td>
 
                     <td width="100%">
                         <form class="form-inline" method="get" action="http://sa.lbsg.net/api.php">
