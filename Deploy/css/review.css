@@ -31,7 +31,25 @@ body {
     height: 250px;
     max-width: 350px;
     box-shadow: 5px 5px 10px #454741;
+    margin-bottom: 20px;
 }
 .highlight{
     background-color: #FCFDC1;
+}
+#signIn{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#signIn h2{
+    font-weight: bold;
+}
+#signIn .col-md-3{
+    height: 280px;
+    background-color: #deebf7;
+}
+#signIn button{
+    bottom: 5px;
+    position: absolute;
+    left: 14px;
+    width: 270px;
 }
