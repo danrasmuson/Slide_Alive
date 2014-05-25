@@ -17,10 +17,12 @@
         function TodoCtrl($scope) {
             $scope.slides = [
                 {sentance:'This is a pizza', number:"one", image:"http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg"},
-                {sentance:'This is a dog', number:"two", image:"http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg"}];
+                {sentance:'This is a dog', number:"two", image:"http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg"},
+                {sentance:'This is a dog', number:"three", image:"http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg"}];
             $scope.backup = {};
             $scope.backup["one"] = ["http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg","http://www.nataliescoalfiredpizza.com/wp-content/uploads/2013/11/Slider-Pizza1.jpg","http://upload.wikimedia.org/wikipedia/commons/8/88/HotPizza.jpg"];
             $scope.backup["two"] = ["http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg","http://www.nataliescoalfiredpizza.com/wp-content/uploads/2013/11/Slider-Pizza1.jpg","http://upload.wikimedia.org/wikipedia/commons/8/88/HotPizza.jpg"];
+            $scope.backup["three"] = ["http://www.aerogrils.ru/netcat_files/Image/pizza2.jpg","http://www.nataliescoalfiredpizza.com/wp-content/uploads/2013/11/Slider-Pizza1.jpg","http://upload.wikimedia.org/wikipedia/commons/8/88/HotPizza.jpg"];
             
 
             $scope.download = function(){
@@ -38,30 +40,30 @@
 
 <body ng-app>
 <div ng-controller="TodoCtrl">
-    <div id="signIn">
-            <div class="row">
-                <div class="col-md-2 col-md-offset-4" >
-                    <form class="form-signin" role="form" _lpchecked="1">
-                        <h2 class="form-signin-heading">please sign in</h2>
-                        <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
-                        <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
-                        <br>
-                        <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
-                    </form>
-                </div>          
-                <div class="col-md-2">
-                    <form class="form-signin" role="form" _lpchecked="1">
-                        <h2 class="form-signin-heading">please sign up</h2>
-                        <input type="name" class="form-control" placeholder="first name" required="" autofocus="" autocomplete="off">
-                        <input type="name" class="form-control" placeholder="last name" required="" autofocus="" autocomplete="off">
-                        <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
-                        <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
-                        <br>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">download</button>
-                    </form>
-                </div>
+       <div id="signIn">
+        <div class="row">
+            <div id="forms">
+                <form class="form-signin" role="form" _lpchecked="1" style="padding-top: 5px;">
+                    <h2 class="form-signin-heading">sign in</h2>
+                    <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
+                    <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
+                    <br>
+                    <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
+                </form>
+                <form class="form-signin" role="form" _lpchecked="1">
+                    <h2 class="form-signin-heading">sign up</h2>
+                    <input type="name" class="form-control" placeholder="first name" required="" autofocus="" autocomplete="off">
+                    <input type="name" class="form-control" placeholder="last name" required="" autofocus="" autocomplete="off">
+                    <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
+                    <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
+                    <br>
+                </form>
+            </div>
+            <div id="download">
+                <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
             </div>
         </div>
+    </div>
         <div class="container" ng-repeat="slide in slides">
             <div class="row">
                 <div class="col-md-12">
