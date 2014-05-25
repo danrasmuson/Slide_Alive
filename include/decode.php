@@ -208,12 +208,14 @@
 		foreach($imgurlcache as $key => $value) {
 			$str = "";
 			$str .= '$scope.backup["'.$key.'"] = [';
-			foreach($value as $val) {
-				$str .= '"'.$val.'",';
+			if(count($value) > 0) {
+				foreach($value as $val) {
+					$str .= '"'.$val.'",';
+				}
+				$newstr = substr($str,0,-1);
+				$newstr .= "];";
+				$output2[] = $newstr;
 			}
-			$newstr = substr($str,0,-1);
-			$newstr .= "];";
-			$output2[] = $newstr;
 		}
 	}
 ?>

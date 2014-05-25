@@ -8,35 +8,34 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css\review.css">
-
 </head>
 
 <body ng-app>
 <div ng-controller="TodoCtrl">
     <div id="signIn">
-            <div class="row">
-                <div class="col-md-2 col-md-offset-4" >
-                    <form class="form-signin" role="form" _lpchecked="1" action="login.php" method="post">
-                        <h2 class="form-signin-heading">please sign in</h2>
-                        <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
-                        <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
-                        <br>
-                        <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
-                    </form>
-                </div>          
-                <div class="col-md-2">
-                    <form class="form-signin" role="form" _lpchecked="1">
-                        <h2 class="form-signin-heading">please sign up</h2>
-                        <input type="name" class="form-control" placeholder="first name" required="" autofocus="" autocomplete="off">
-                        <input type="name" class="form-control" placeholder="last name" required="" autofocus="" autocomplete="off">
-                        <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
-                        <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
-                        <br>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">download</button>
-                    </form>
-                </div>
+        <div class="row">
+            <div id="forms">
+                <form class="form-signin" role="form" _lpchecked="1" style="padding-top: 5px;">
+                    <h2 class="form-signin-heading">sign in</h2>
+                    <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
+                    <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
+                    <br>
+                    <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
+                </form>
+                <form class="form-signin" role="form" _lpchecked="1">
+                    <h2 class="form-signin-heading">sign up</h2>
+                    <input type="name" class="form-control" placeholder="first name" required="" autofocus="" autocomplete="off">
+                    <input type="name" class="form-control" placeholder="last name" required="" autofocus="" autocomplete="off">
+                    <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
+                    <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
+                    <br>
+                </form>
+            </div>
+            <div id="download">
+                <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
             </div>
         </div>
+    </div>
         <div class="container" ng-repeat="slide in slides">
             <div class="row">
                 <div class="col-md-12">
@@ -94,10 +93,12 @@
 				console.log($scope.backup);
             $scope.download = function(){
                 var urlArray = [];
+				var sentenceArray = [];
                 for (var i = 0; i < $scope.slides.length; i++){
                     urlArray.push($scope.slides[i].image);
+					sentenceArray.push($scope.slides[i].sentance);
                 }
-                window.location = "http://sa.lbsg.net/doConvert.php?args=" + JSON.stringify(urlArray);
+                window.location = "http://sa.lbsg.net/doConvert.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
             }
 			$scope.renderHtml = function(htmlCode) {
 			  return $sce.trustAsHtml(htmlCode);

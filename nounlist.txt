@@ -35864,7 +35864,6 @@ erupted
 erupting
 eruption
 eruptional
-eruptions
 eruptive
 eruptivity
 erupts

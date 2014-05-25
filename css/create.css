@@ -16,6 +16,8 @@ body {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
+    margin-top: -50px;
+    position: relative;
 }
 #logo img {
     width: 80px;
@@ -23,9 +25,11 @@ body {
     padding-top: 10px;
 }
 #content textarea {
+    min-height: 200px;
     border-style:solid;
     border-width:5px;
     border-color: #8497b0;
+    background-color: #deebf7;
 }
 .button{
     color: #6AA7F0;
@@ -33,6 +37,8 @@ body {
     font-family: 'Roboto', sans-serif;
 
     float: right;
+
+    position: relative;
 
     border-style:solid;
     border-width:3px;
@@ -46,4 +52,32 @@ body {
     
     font-size: 20px;
     font-weight: bold;
+}
+#greyBackground{
+    background-color: #8497b0;
+}
+#nullBox{
+    height: 49px;
+    width: 120px;
+    background-color: #82BBD7;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto; 
+    width: /*whatever width you want*/;
 }
