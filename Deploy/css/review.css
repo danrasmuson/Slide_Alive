@@ -65,7 +65,7 @@ span img {
 #signIn h2{
     font-weight: bold;
 }
-#signIn .col-md-3{
+#signIn .col-md-2{
     height: 280px;
     background-color: #deebf7;
 }
@@ -73,7 +73,7 @@ span img {
     bottom: 5px;
     position: absolute;
     left: 14px;
-    width: 270px;
+    width: 240px;
 }
 .opaque{
     opacity: 0.6;
