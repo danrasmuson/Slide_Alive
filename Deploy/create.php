@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <div class="outer"><div class="middle"><div class="inner">
     <div id="content" class="row">
         <div class="col-md-8 col-md-offset-2">
             <table>

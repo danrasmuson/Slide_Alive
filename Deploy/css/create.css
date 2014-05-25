@@ -2,9 +2,8 @@ body {
     background-color: #82BBD7;
 }
 #content {
-    position: absolute;
     display: inline-block;
-    top: 30%;
+    margin:0 auto;
 }
 #logo {
     width: 120px;
@@ -64,4 +63,21 @@ body {
     display: block;
     position: absolute;
     bottom: 0px;
+}
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto; 
+    width: /*whatever width you want*/;
 }
