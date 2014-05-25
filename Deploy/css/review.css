@@ -3,6 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;  
     color: #6AA7F0;
+    padding-bottom: 20px;
 }
 .slideTitle{
     display: block;
@@ -27,11 +28,37 @@ body {
     font-size: 22px;
     color: #184883;
 }
-.container img{
+/*.container img{
     height: 250px;
     max-width: 350px;
     box-shadow: 5px 5px 10px #454741;
     margin-bottom: 20px;
+}*/
+.dark {
+    display: inline-block;
+    position: relative;
+    height: 250px;
+    width: 350px;
+}
+span img {
+    height: 250px;
+    width: 350px;
+    vertical-align:top;
+}
+.dark:after {
+    content:'';
+    position:absolute;
+    width:100%; 
+    height:100%;
+    top:0; 
+    left:0;
+    background:rgba(0,0,0,.6);
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.dark:hover:after {
+    opacity:0;
 }
 .highlight{
     background-color: #FCFDC1;

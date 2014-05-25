@@ -55,17 +55,17 @@
     <div class="row">
         <div class="col-md-4">
             <span>
-                <img src="img/pizza1.jpg" alt="pizza">
+                <span class=""><img src="img/pizza1.jpg" alt="pizza"></span>
             </span>
         </div>
         <div class="col-md-4">
             <span>
-                <img src="img/pizza2.jpg" alt="pizza">
+                <span class="dark"><img src="img/pizza2.jpg" alt="pizza"></span>
             </span>
         </div>
         <div class="col-md-4">
             <span>
-                <img src="img/pizza3.jpg" alt="pizza">
+                <span class="dark"><img src="img/pizza3.jpg" alt="pizza"></span>
             </span>
         </div>
     </div>
@@ -88,17 +88,17 @@
     <div class="row">
         <div class="col-md-4">
             <span>
-                <img src="img/fish1.jpg" alt="fish">
+                <span class=""><img src="img/fish1.jpg" alt="fish"></span>
             </span>
         </div>
         <div class="col-md-4">
             <span>
-                <img src="img/fish2.jpg" alt="fish">
+                <span class="dark"><img src="img/fish2.jpg" alt="fish"></span>
             </span>
         </div>
         <div class="col-md-4">
             <span>
-                <img src="img/fish3.jpg" alt="fish">
+                <span class="dark"><img src="img/fish3.jpg" alt="fish"></span>
             </span>
         </div>
     </div>

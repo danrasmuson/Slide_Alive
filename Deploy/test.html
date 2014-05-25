@@ -1,0 +1,30 @@
+<style>
+    .image {
+        position: relative;
+        height: 250px;
+        width: 350px;
+    }
+    .image img {
+        width:100%;
+        height: 100%;
+        vertical-align:top;
+    }
+    .image:after {
+        content:'';
+        position:absolute;
+        width:100%; 
+        height:100%;
+        top:0; 
+        left:0;
+        background:rgba(0,0,0,.6);
+        opacity:1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+    .image:hover:after {
+        opacity:0;
+    }
+</style>
+<div class="image">
+    <img src="img/pizza1.jpg" alt="" />
+</div>
