@@ -19,7 +19,8 @@ body {
     border-bottom: solid;
     border-bottom-width: 8px; 
     border-color: #8497b0;
-
+    
+    margin-top: 15px;
 }
 .sentance{
     display: block;
@@ -28,12 +29,6 @@ body {
     font-size: 22px;
     color: #184883;
 }
-/*.container img{
-    height: 250px;
-    max-width: 350px;
-    box-shadow: 5px 5px 10px #454741;
-    margin-bottom: 20px;
-}*/
 .dark {
     display: inline-block;
     position: relative;
@@ -79,4 +74,7 @@ span img {
     position: absolute;
     left: 14px;
     width: 270px;
+}
+.opaque{
+    opacity: 0.6;
 }
