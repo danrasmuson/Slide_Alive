@@ -1,0 +1,37 @@
+body {
+    background-color: #82BBD7;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;  
+    color: #6AA7F0;
+}
+.slideTitle{
+    display: block;
+    width: 100%;
+
+    background-color: #deebf7;
+    
+    font-size: 40px;
+    text-align: center;
+
+    border-top: solid;
+    border-top-width: 8px; 
+    border-bottom: solid;
+    border-bottom-width: 8px; 
+    border-color: #8497b0;
+
+}
+.sentance{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 22px;
+    color: #184883;
+}
+.container img{
+    height: 250px;
+    max-width: 350px;
+    box-shadow: 5px 5px 10px #454741;
+}
+.highlight{
+    background-color: #FCFDC1;
+}
