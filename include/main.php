@@ -1,58 +1,108 @@
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
 
-    <title>Results</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Create a SlideAlive Presentation</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css\review.css">
 
-    <!-- Custom styles for this template -->
-    <link href="grid.css" rel="stylesheet">
+</head>
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<body ng-app>
+<div ng-controller="TodoCtrl">
+    <div id="signIn">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-4" >
+                    <form class="form-signin" role="form" _lpchecked="1" action="login.php" method="post">
+                        <h2 class="form-signin-heading">please sign in</h2>
+                        <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
+                        <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
+                        <br>
+                        <button class="btn btn-lg btn-primary btn-block" ng-click="download()" type="submit">download</button>
+                    </form>
+                </div>          
+                <div class="col-md-2">
+                    <form class="form-signin" role="form" _lpchecked="1">
+                        <h2 class="form-signin-heading">please sign up</h2>
+                        <input type="name" class="form-control" placeholder="first name" required="" autofocus="" autocomplete="off">
+                        <input type="name" class="form-control" placeholder="last name" required="" autofocus="" autocomplete="off">
+                        <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
+                        <input type="password" class="form-control" placeholder="password" required="" autocomplete="off">
+                        <br>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">download</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container" ng-repeat="slide in slides">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="slideTitle">change slide {{slide.number}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="sentance" ng-bind-html="renderHtml(slide.sentance)"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-repeat="image in backup[slide.number]" class="col-md-4">
+                    <span ng-class="{dark: image !== slide.image}" ng-click="slide.image = image"><img src="{{image}}" alt=""></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
 
-  <style>
-	.chkcontainer { position: relative; width: 300px; float: left; margin-left: 10px; }
-	.checkbox { position: absolute; bottom: 0px; right: 0px; }
-	body {
-		background:#6699FF !important;
-	}
-  </style>
-  <body bgcolor="#6699FF">
-    <div class="container">
-
-      <div class="page-header">
-        <h1>Here's what we found!</h1>
-      </div>
-	    <div class="row">
-		  <?php
-			function main() {
-				global $inputText, $wordData;
-				$required_parameters = array('input');
-				foreach($required_parameters as $param) {
-					if(!isset($_POST[$param])) {
-						echo 'Was expecting a parameter of "'.$param.'", which was not set.';
-						die();
-					}
-				}
-				$inputText = $_POST['input'];
-				decodeText();
-			}
-		?>
-	</div>
 </body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular-sanitize.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script>
+  
+        function TodoCtrl($scope, $sce) {
+            $scope.slides = <?php
+					require_once('flickr.php');
+					require_once('decode.php');
+					require_once('drive.php');
+					$required_parameters = array('input');
+					foreach($required_parameters as $param) {
+						if(!isset($_POST[$param])) {
+							echo 'Was expecting a parameter of "'.$param.'", which was not set.';
+							die();
+						}
+					}
+					$inputText = $_POST['input'];
+					decodeText();
+					foreach($output1 as $line) {
+						echo $line;
+					}
+				?>;
+				console.log($scope.slides);
+			$scope.backup = {};
+				<?php
+					foreach($output2 as $line) {
+						echo $line."\n";
+					}
+				?>
+				console.log($scope.backup);
+            $scope.download = function(){
+                var urlArray = [];
+                for (var i = 0; i < $scope.slides.length; i++){
+                    urlArray.push($scope.slides[i].image);
+                }
+                window.location = "http://sa.lbsg.net/doConvert.php?args=" + JSON.stringify(urlArray);
+            }
+			$scope.renderHtml = function(htmlCode) {
+			  return $sce.trustAsHtml(htmlCode);
+			};
+        } 
+    </script>
+	
 </html>
