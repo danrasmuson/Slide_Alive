@@ -29,7 +29,7 @@
             </div>          
             <div class="col-md-3">
                 <form class="form-signin" role="form" _lpchecked="1">
-                    <h2 class="form-signin-heading">please sign in</h2>
+                    <h2 class="form-signin-heading">please sign up</h2>
                     <input type="name" class="form-control" placeholder="first name" required="" autofocus="" autocomplete="off">
                     <input type="name" class="form-control" placeholder="last name" required="" autofocus="" autocomplete="off">
                     <input type="email" class="form-control" placeholder="email address" required="" autofocus="" autocomplete="off">
