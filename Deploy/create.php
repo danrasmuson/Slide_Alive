@@ -23,7 +23,7 @@
                     </td>
 
                     <td width="100%">
-                        <form class="form-inline" method="post" action="http://sa.lbsg.net/api.php">
+                        <form class="form-inline" method="post" action="api.php">
                             <textarea onkeyup="textAreaAdjust(this)" name="input" style="overflow:hidden; width: 100%;" placeholder="Enter some text here, and we'll turn it into a presentation."></textarea>
                             <input type="submit" value="done" class="button" onclick="var opts = {
 								  lines: 13, // The number of lines to draw

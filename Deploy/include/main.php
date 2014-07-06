@@ -98,7 +98,7 @@
                     urlArray.push($scope.slides[i].image);
 					sentenceArray.push($scope.slides[i].sentance);
                 }
-                window.location = "http://sa.lbsg.net/doConvert.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
+                window.location = "doConvert.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
             }
 			$scope.renderHtml = function(htmlCode) {
 			  return $sce.trustAsHtml(htmlCode);
