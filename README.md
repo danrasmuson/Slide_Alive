@@ -1,4 +1,3 @@
-Slide_Alive
+SlideAlive
 ===========
-Drive Folder
-https://drive.google.com/folderview?id=0B_jRj36CwqrtUlBDQTdyTWw5Mjg&usp=sharing
+A webapp to make creating applications from a body of text fast, fun & simple.
