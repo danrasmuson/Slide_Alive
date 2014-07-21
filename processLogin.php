@@ -14,7 +14,7 @@ include('include/login/result.php');
 
 $mysql = databaseConnect();
 
-$action = $_POST['action'];
+$action = $_GET['action'];
 $password = $_POST['password'];
 $email = $_POST['email'];
 
