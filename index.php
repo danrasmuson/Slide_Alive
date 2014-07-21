@@ -12,7 +12,6 @@
         <header>
         slide &nbsp;&nbsp;&nbsp;&nbsp;alive <div id="studios">studios</div>
         </header>
-        Testing autosync!
     </div>
     <div id="moto">making your presentations fast and beautiful - 
         <a href="create.php"><div class="button">try now</div></a>
