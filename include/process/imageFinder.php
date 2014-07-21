@@ -15,6 +15,7 @@ class imageFinder {
     private $imgurlcache = array();
     private $iteration = 0;
     private $flickr;
+    private $done = 0;
 
     public function __construct($input) {
         $this->flickr = new Flickr();
@@ -60,19 +61,19 @@ class imageFinder {
                 }
             }
             $count = 0;
-            $done++;
+            $this->done++;
             foreach(explode(" ",$item) as $elem) {
                 $key = str_ireplace($elem,'<span class="highlight">'.$elem.'</span>',$key);
             }
-            if(count($queries) === $on) {
-                $output[] = array("sentance" => trim(str_replace('\"','"',$key)," "), "number" => convert_number_to_words($done), "image" => $urls[0]);
+            if(count($input) === $this->iteration) {
+                $output[] = array("sentance" => trim(str_replace('\"','"',$key)," "), "number" => convert_number_to_words($this->done), "image" => $urls[0]);
                 $this->output1 = array(json_encode($output));
             } else {
-                $output[] = array("sentance" => trim(str_replace('\"','"',$key)," "), "number" => convert_number_to_words($done), "image" => $urls[0]);
+                $output[] = array("sentance" => trim(str_replace('\"','"',$key)," "), "number" => convert_number_to_words($this->done), "image" => $urls[0]);
             }
-            $this->imgurlcache[convert_number_to_words($done)] = array();
+            $this->imgurlcache[convert_number_to_words($this->done)] = array();
             foreach($urls as $url) {
-                $this->imgurlcache[convert_number_to_words($done)][] = $url;
+                $this->imgurlcache[convert_number_to_words($this->done)][] = $url;
             }
         }
         foreach($this->imgurlcache as $key => $value) {
