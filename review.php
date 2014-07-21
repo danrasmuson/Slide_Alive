@@ -1,6 +1,6 @@
 <?php
     require('include/decode/decode.php');
-    require('include/process/imageFinder.php')
+    require('include/process/imageFinder.php');
     require('include/core.php');
 
     fatalParameterCheck(array('input'),'POST');
