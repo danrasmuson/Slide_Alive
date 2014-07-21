@@ -43,7 +43,7 @@
 								  left: '8.3%' // Left position relative to parent
 								};
 								var target = document.getElementById('foo');
-								var spinner = new Spinner(opts).spin(logo);">
+								var spinner = new Spinner(opts).spin(nullBox);">
                         </form>
 
                     </td>
