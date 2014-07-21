@@ -17,7 +17,7 @@
             <table>
                 <tr>
                     <td id="greyBackground" onkeyup="textAreaAdjust(this)">
-                        <div id="logo"><img src="img/logoPNG.png" alt=""></div><div id="spinhere"></div></div>
+                        <div id="logo"><img src="img/logoPNG.png" alt=""></div></div>
                         <div id="nullBox"></div>
                     </td>
 
@@ -39,11 +39,11 @@
 								  hwaccel: true, // Whether to use hardware acceleration
 								  className: 'spinner', // The CSS class to assign to the spinner
 								  zIndex: 2e9, // The z-index (defaults to 2000000000)
-								  top: '40%', // Top position relative to parent
-								  left: '8.3%' // Left position relative to parent
+								  top: '50%', // Top position relative to parent
+								  left: '50%' // Left position relative to parent
 								};
 								var target = document.getElementById('foo');
-								var spinner = new Spinner(opts).spin(spinhere);">
+								var spinner = new Spinner(opts).spin(logo);">
                         </form>
 
                     </td>
