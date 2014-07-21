@@ -16,17 +16,19 @@ class imageFinder {
     private $iteration = 0;
     private $flickr;
     private $done = 0;
+    private $sent = array();
 
     public function __construct($input) {
         $this->flickr = new Flickr();
+
         foreach($input as $key => $item) {
             $this->iteration++;
             $finalquery = "";
             $words = explode(" ",$item);
             foreach($words as $word) {
-                if(in_array($word,$sent) == false) {
+                if(in_array($word,$this->sent) == false) {
                     $finalquery .= " ".$word;
-                    $sent[] = $word;
+                    $this->sent[] = $word;
                 }
             }
             $urls = array();
