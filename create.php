@@ -17,7 +17,7 @@
             <table>
                 <tr>
                     <td id="greyBackground" onkeyup="textAreaAdjust(this)">
-                        <div id="logo"><div id="spinhere"></div></div><img src="img/logoPNG.png" alt=""></div>
+                        <div id="logo"><img src="img/logoPNG.png" alt=""></div><div id="spinhere"></div></div>
                         <div id="nullBox"></div>
                     </td>
 
