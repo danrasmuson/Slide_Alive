@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <title>Create a SlideAlive Presentation</title>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css\create.css">
-    <script type="text/javascript" src="js/textArea.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/create.css">
+    <script src="js/textArea.js"></script>
 	<script src="js/bootstrap.js"></script>
-	<script src="http://fgnass.github.io/spin.js/spin.min.js"></script>
+	<script src="js/spin.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -17,8 +16,8 @@
         <div class="col-md-8 col-md-offset-2">
             <table>
                 <tr>
-                    <div id="spinhere"></div><td id="greyBackground" onkeyup="textAreaAdjust(this)">
-                        <div id="logo"><img src="img/logoPNG.png" alt=""></div>
+                    <td id="greyBackground" onkeyup="textAreaAdjust(this)">
+                        <div id="logo"><div id="spinhere"></div><img src="img/logoPNG.png" alt=""></div>
                         <div id="nullBox"></div>
                     </td>
 
