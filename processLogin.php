@@ -2,52 +2,44 @@
 <head>
     <title>SlideAlive Account Activation</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <style>
-        .roboto {
-            font-family: 'Roboto', sans-serif;
-            color: #ffffff;
-        }
-
-        .container {
-            width: 40%;
-            height: 10%;
-            position: relative;
-            left: 30%;
-            top: 45%;
-            text-align: center;
-        }
-    </style>
+    <link href='css/login/main.css' rel='stylesheet' type='text/css'>
 </head>
-<body bgcolor="#1f4e78">
-<img src="img/header.png" width="10%" height="7%" style="position: absolute">
+<body>
+<img src="img/header.png" class="header">
 <?php
-$invalid = false;
+include('include/core.php');
+include('include/login/response.php');
+include('include/login/request.php');
+include('include/login/result.php');
 
+$mysql = databaseConnect();
+
+$action = $_POST['action'];
 $password = $_POST['password'];
-if(isset($password) === false) {
-    $password = "";
+$email = $_POST['email'];
+
+$response = new loginResponse();
+$request = new loginRequest();
+
+if(validateEmail($email) === false) {
+    $response->fail("Please check the values you entered for your email and try again.");
 }
-$requirements = array('@','.');
-foreach($requirements as $requirement) {
-    if(stristr($password,$requirement) === false) {
-        invalidate();
-    }
+
+switch($action) {
+    case "register":
+        $loginResult = $request->registerNewUser($email, $password);
+    break;
+    case "login":
+        $loginResult = $request->loginUser($email, $password);
+    break;
+    default:
+        $response->fail("Invalid arguments specified.");
 }
-$mysql = mysqli_connect("127.0.0.1","root","5cT00sL4NbEpUgfxM5DJ","accounts");
-if($mysql->query("INSERT INTO `login` (`email`,`password`) VALUES '".$_POST['email']."','".hash("sha512",$password)) === false) {
-    echo '<div class="container">';
-    echo '<h1 class="roboto">Account activation failed.</h1>';
-    echo '<h2 class="roboto">This account already exists. Forgot your password?</h2>';
-    echo '</div>';
-}
-function invalidate() {
-    global $invalid;
-    if($invalid) return;
-    $invalid = true;
-    echo '<div class="container">';
-        echo '<h1 class="roboto">Account activation failed.</h1>';
-        echo '<h2 class="roboto">Please check the values you entered and try again.</h2>';
-    echo '</div>';
+
+if($loginResult->succeeded) {
+    $response->succeed();
+} else {
+    $response->fail($loginResult->failReason);
 }
 ?>
 </body>

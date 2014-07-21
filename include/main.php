@@ -67,8 +67,8 @@
   
         function TodoCtrl($scope, $sce) {
             $scope.slides = <?php
-					require_once('decode.php');
 					require_once('flickr.php');
+					require_once('decode.php');
 					$required_parameters = array('input');
 					foreach($required_parameters as $param) {
 						if(!isset($_POST[$param])) {
@@ -82,12 +82,14 @@
 						echo $line;
 					}
 				?>;
+				console.log($scope.slides);
 			$scope.backup = {};
 				<?php
 					foreach($output2 as $line) {
 						echo $line."\n";
 					}
 				?>
+				console.log($scope.backup);
             $scope.download = function(){
                 var urlArray = [];
 				var sentenceArray = [];

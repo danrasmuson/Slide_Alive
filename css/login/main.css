@@ -1,0 +1,23 @@
+.roboto {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    width: 40%;
+    height: 10%;
+    position: relative;
+    left: 30%;
+    top: 45%;
+    text-align: center;
+}
+
+#body {
+    bgcolor="#1f4e78";
+}
+
+.header {
+    position: absolute;
+    width: 150px;
+    height: 75px;
+}
