@@ -17,6 +17,7 @@ class imageFinder {
     private $flickr;
     private $done = 0;
     private $sent = array();
+    private $sent_urls = array();
 
     public function __construct($input) {
         $this->flickr = new Flickr();
@@ -40,13 +41,17 @@ class imageFinder {
                 $search = 'http://flickr.com/services/rest/?method=flickr.photos.search&api_key=c8914ccb88aa42f695cb103739a584a1&text=' . urlencode($finalquery) . '&per_page=2&format=php_serial&sort=relevance';
                 $data = unserialize(file_get_contents($search));
                 if(isset($data['photos']['photo'][1]["server"])) {
-                    $urls[] = 'http://farm' . $data['photos']['photo'][1]["farm"] . '.static.flickr.com/' . $data['photos']['photo'][1]["server"] . '/' . $data['photos']['photo'][1]["id"] . '_' . $data['photos']['photo'][1]["secret"] . '.jpg';
+                    $url = 'http://farm' . $data['photos']['photo'][1]["farm"] . '.static.flickr.com/' . $data['photos']['photo'][1]["server"] . '/' . $data['photos']['photo'][1]["id"] . '_' . $data['photos']['photo'][1]["secret"] . '.jpg';
+                    $urls[] = $url;
+                    $this->sent_urls[] = $url;
                 }
 
                 $search = 'http://flickr.com/services/rest/?method=flickr.photos.search&api_key=c8914ccb88aa42f695cb103739a584a1&text=' . urlencode($finalquery) . '&per_page=3&format=php_serial&sort=relevance';
                 $data = unserialize(file_get_contents($search));
                 if(isset($data['photos']['photo'][2]["server"])) {
-                    $urls[] = 'http://farm' . $data['photos']['photo'][2]["farm"] . '.static.flickr.com/' . $data['photos']['photo'][2]["server"] . '/' . $data['photos']['photo'][2]["id"] . '_' . $data['photos']['photo'][2]["secret"] . '.jpg';
+                    $url = 'http://farm' . $data['photos']['photo'][2]["farm"] . '.static.flickr.com/' . $data['photos']['photo'][2]["server"] . '/' . $data['photos']['photo'][2]["id"] . '_' . $data['photos']['photo'][2]["secret"] . '.jpg';
+                    $urls[] = $url;
+                    $this->sent_urls[] = $url;
                 }
             }
             $count = count($urls);
@@ -56,13 +61,14 @@ class imageFinder {
                         $search = 'http://flickr.com/services/rest/?method=flickr.photos.search&api_key=c8914ccb88aa42f695cb103739a584a1&text=' . urlencode($dataset) . '&per_page=1&format=php_serial&sort=relevance';
                         $data = unserialize(file_get_contents($search));
                         if(isset($data['photos']['photo'][0]["server"])) {
-                            $urls[] = 'http://farm' . $data['photos']['photo'][0]["farm"] . '.static.flickr.com/' . $data['photos']['photo'][0]["server"] . '/' . $data['photos']['photo'][0]["id"] . '_' . $data['photos']['photo'][0]["secret"] . '.jpg';
+                            $url = 'http://farm' . $data['photos']['photo'][0]["farm"] . '.static.flickr.com/' . $data['photos']['photo'][0]["server"] . '/' . $data['photos']['photo'][0]["id"] . '_' . $data['photos']['photo'][0]["secret"] . '.jpg';
+                            $urls[] = $url;
+                            $this->sent_urls[] = $url;
                         }
                     }
                     $count = count($urls);
                 }
             }
-            $count = 0;
             $this->done++;
             foreach(explode(" ",$item) as $elem) {
                 $key = str_ireplace($elem,'<span class="highlight">'.$elem.'</span>',$key);
