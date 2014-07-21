@@ -35,8 +35,9 @@
       <file leaf-file-name="create.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="49" selection-start="773" selection-end="773" vertical-scroll-proportion="0.3653846" vertical-offset="0" max-vertical-offset="1037">
+            <state line="19" column="69" selection-start="793" selection-end="793" vertical-scroll-proportion="0.3653846" vertical-offset="0" max-vertical-offset="1037">
               <folding>
+                <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#td#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -574,8 +575,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="773" selection-end="773" vertical-scroll-proportion="0.3653846" vertical-offset="0" max-vertical-offset="1037">
+        <state line="19" column="69" selection-start="793" selection-end="793" vertical-scroll-proportion="0.3653846" vertical-offset="0" max-vertical-offset="1037">
           <folding>
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#form#0;n#td#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>

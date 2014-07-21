@@ -17,7 +17,7 @@
             <table>
                 <tr>
                     <td id="greyBackground" onkeyup="textAreaAdjust(this)">
-                        <div id="spinhere"></div>
+                        <div id="spinhere" style="position: relative"></div>
                         <div id="logo"></div><img src="img/logoPNG.png" alt=""></div>
                         <div id="nullBox"></div>
                     </td>
@@ -44,7 +44,7 @@
 								  left: '8.3%' // Left position relative to parent
 								};
 								var target = document.getElementById('foo');
-								var spinner = new Spinner(opts).spin(nullBox);">
+								var spinner = new Spinner(opts).spin(spinhere);">
                         </form>
 
                     </td>
