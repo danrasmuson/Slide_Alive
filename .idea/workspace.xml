@@ -23,19 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="doConvert.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doConvert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="2" selection-start="1473" selection-end="1527" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="391">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="41" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.63461536" vertical-offset="136" max-vertical-offset="1020">
+            <state line="41" column="41" selection-start="2109" selection-end="2109" vertical-scroll-proportion="-21.576923" vertical-offset="136" max-vertical-offset="1020">
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#form#0;n#td#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -56,6 +47,24 @@
         <entry file="file://$PROJECT_DIR$/processLogin.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="27" selection-start="464" selection-end="464" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="867">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/include/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="0" selection-start="3486" selection-end="3486" vertical-scroll-proportion="0.43463302" vertical-offset="1015" max-vertical-offset="1887">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="review.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/review.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="16" selection-start="1498" selection-end="1498" vertical-scroll-proportion="-25.72" vertical-offset="836" max-vertical-offset="1734">
               <folding />
             </state>
           </provider>
@@ -111,17 +120,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/core.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="19" selection-start="613" selection-end="613" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="663">
-              <folding>
-                <element signature="e#6#249#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -140,10 +138,10 @@
         <option value="$PROJECT_DIR$/include/login/login.php" />
         <option value="$PROJECT_DIR$/include/login/request.php" />
         <option value="$PROJECT_DIR$/processLogin.php" />
-        <option value="$PROJECT_DIR$/include/main.php" />
         <option value="$PROJECT_DIR$/sync.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/create.php" />
+        <option value="$PROJECT_DIR$/include/main.php" />
       </list>
     </option>
   </component>
@@ -424,9 +422,7 @@
     <entry file="file://$PROJECT_DIR$/include/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="19" selection-start="3597" selection-end="3597" vertical-scroll-proportion="0.0" vertical-offset="987" max-vertical-offset="1921">
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -502,15 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.6633222" vertical-offset="0" max-vertical-offset="1887">
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thank_you.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="923">
@@ -548,13 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="27" selection-start="464" selection-end="464" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="867">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="39" selection-start="720" selection-end="720" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="561">
@@ -574,10 +554,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="41" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.63461536" vertical-offset="136" max-vertical-offset="1020">
+        <state line="41" column="41" selection-start="2109" selection-end="2109" vertical-scroll-proportion="-21.576923" vertical-offset="136" max-vertical-offset="1020">
           <folding>
             <element signature="n#style#0;n#textarea#0;n#form#0;n#td#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/review.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="16" selection-start="1498" selection-end="1498" vertical-scroll-proportion="-25.72" vertical-offset="836" max-vertical-offset="1734">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="464" selection-end="464" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="3486" selection-end="3486" vertical-scroll-proportion="0.43463302" vertical-offset="1015" max-vertical-offset="1887">
+          <folding />
         </state>
       </provider>
     </entry>

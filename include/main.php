@@ -80,14 +80,14 @@
 						echo $line;
 					}
 				?>;
-				console.log($scope.slides);
+
 			$scope.backup = {};
 				<?php
 					foreach($output2 as $line) {
 						echo $line."\n";
 					}
 				?>
-				console.log($scope.backup);
+
             $scope.download = function(){
                 var urlArray = [];
 				var sentenceArray = [];
