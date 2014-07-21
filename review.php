@@ -34,37 +34,37 @@
             </div>
         </div>
     </div>
-        <div class="container" ng-repeat="slide in slides">
-            <div class="row">
-                <div class="col-md-12">
-                    <span class="slideTitle">change slide {{slide.number}}</span>
-                </div>
+    <div class="container" ng-repeat="slide in slides">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="slideTitle">change slide {{slide.number}}</span>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <span class="sentance" ng-bind-html="renderHtml(slide.sentance)"></span>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span class="sentance" ng-bind-html="renderHtml(slide.sentance)"></span>
             </div>
-            <div class="row">
-                <div ng-repeat="image in backup[slide.number]" class="col-md-4">
-                    <span ng-class="{dark: image !== slide.image}" ng-click="slide.image = image"><img src="{{image}}" alt=""></span>
-                </div>
+        </div>
+        <div class="row">
+            <div ng-repeat="image in backup[slide.number]" class="col-md-4">
+                <span ng-class="{dark: image !== slide.image}" ng-click="slide.image = image"><img src="{{image}}" alt=""></span>
             </div>
         </div>
     </div>
 </div>
+</div>
 
 
 </body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular-sanitize.js"></script>
-    <script src="js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular-sanitize.js"></script>
+<script src="js/bootstrap.js"></script>
 
-    <script>
-  
-        function TodoCtrl($scope, $sce) {
-            $scope.slides = <?php
+<script>
+
+    function TodoCtrl($scope, $sce) {
+        $scope.slides = <?php
 					require_once('flickr.php');
 					require_once('decode.php');
 					$required_parameters = array('input');
@@ -81,26 +81,26 @@
 					}
 				?>;
 
-			$scope.backup = {};
-				<?php
-					foreach($output2 as $line) {
-						echo $line."\n";
-					}
-				?>
-
-            $scope.download = function(){
-                var urlArray = [];
-				var sentenceArray = [];
-                for (var i = 0; i < $scope.slides.length; i++){
-                    urlArray.push($scope.slides[i].image);
-					sentenceArray.push($scope.slides[i].sentance);
-                }
-                window.location = "http://sa.lbsg.net/doConvert.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
+        $scope.backup = {};
+        <?php
+            foreach($output2 as $line) {
+                echo $line."\n";
             }
-			$scope.renderHtml = function(htmlCode) {
-			  return $sce.trustAsHtml(htmlCode);
-			};
-        } 
-    </script>
-	
+        ?>
+
+        $scope.download = function(){
+            var urlArray = [];
+            var sentenceArray = [];
+            for (var i = 0; i < $scope.slides.length; i++){
+                urlArray.push($scope.slides[i].image);
+                sentenceArray.push($scope.slides[i].sentance);
+            }
+            window.location = "http://sa.lbsg.net/doConvert.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
+        }
+        $scope.renderHtml = function(htmlCode) {
+            return $sce.trustAsHtml(htmlCode);
+        };
+    }
+</script>
+
 </html>
