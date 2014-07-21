@@ -7,7 +7,7 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css\review.css">
+    <link rel="stylesheet" href="css/review.css">
 </head>
 
 <body ng-app>
@@ -20,7 +20,7 @@
                     <input type="email" class="form-control" placeholder="email address" required="" name="email" autofocus="" autocomplete="off">
                     <input type="password" class="form-control" placeholder="password" required="" name="password" autocomplete="off">
                     <br>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">download</button>
+                    <button class="btn btn-lg btn-primary btn-block" ng-click="" type="submit">download</button>
                 </form>
                 <form class="form-signin" action="processLogin.php?action=register" method="post" role="form" _lpchecked="1">
                     <h2 class="form-signin-heading">sign up</h2>
@@ -30,7 +30,7 @@
                 </form>
             </div>
             <div id="download">
-                <button class="btn btn-lg btn-primary btn-block" type="submit">download</button>
+                <button class="btn btn-lg btn-primary btn-block" ng-click="" type="submit">download</button>
             </div>
         </div>
     </div>
