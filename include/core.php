@@ -5,6 +5,26 @@
  * core.php - Functions useful among multiple pieces of code or that make sense to split off.
  * Created by William Teder using PHPstorm on 7/21/14 at 9:16 AM.
  */
+
+function countArrayOccurences($array,$search) {
+    $count = 0;
+    foreach ($array as $item) {
+        if ($item === $search) {
+            $count++;
+        }
+    }
+    return $count;
+}
+
+function removeAllOccurrencesOf($array,$search) {
+    foreach($array as $item) {
+        if($item === $search) {
+            $array = array_diff($array, array($item));
+        }
+    }
+    return $array;
+}
+
 function convert_number_to_words($number) {
     $hyphen      = '-';
     $conjunction = ' and ';
