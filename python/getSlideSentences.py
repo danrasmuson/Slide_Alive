@@ -1,3 +1,4 @@
+from Dictionary import Dictionary
 def getText():
     textFile = open("inputSlideshowText.txt","r")
     fullText = textFile.read()
@@ -14,8 +15,16 @@ def splitListOnChrs(text, splitChrs):
 
 sentences = splitListOnChrs(getText(), [".","!","?","\n"])
 
-# for sentence in sentences:
+english_dict = Dictionary()
+for sentence in sentences:
     # how many words in each sentance
     # print(len(sentence.split())) 
+    for word in sentence.split():
+        grammar = english_dict.getPartOfSpeech(word) 
+        if 'n.' not in grammar and 'v.' not in grammar:
+            if 'a.' in grammar:
+                print word
+                print grammar
+                print "it's an article"
+                print
 
-print(sentences)

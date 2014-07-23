@@ -12,9 +12,3 @@ class Dictionary(object):
             return self.dict[word.upper()]
         except KeyError:
             return 'Not Found In Dictionary'
-
-words = Dictionary()
-print words.getPartOfSpeech('apple')
-print words.getPartOfSpeech('daniel')
-print words.getPartOfSpeech('hennepin')
-print words.getPartOfSpeech('water')
