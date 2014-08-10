@@ -11,7 +11,7 @@ class loginRequest {
 
     }
 
-    public function registerNewUser($email, $password) {
+    public function registerNewUser($mysql, $email, $password) {
         $esc_email = databaseEscapeString($email);
         $esc_pass = databaseEscapeString($password);
 
@@ -29,7 +29,7 @@ class loginRequest {
         return $result;
     }
 
-    public function loginUser($email, $password) {
+    public function loginUser($mysql, $email, $password) {
         $esc_email = databaseEscapeString($email);
         $esc_pass = databaseEscapeString($password);
 

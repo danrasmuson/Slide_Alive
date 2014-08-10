@@ -19,10 +19,10 @@ if(validateEmail($email) === false) {
 
 switch($action) {
     case "register":
-        $loginResult = $request->registerNewUser($email, $password);
+        $loginResult = $request->registerNewUser($mysql, $email, $password);
         break;
     case "login":
-        $loginResult = $request->loginUser($email, $password);
+        $loginResult = $request->loginUser($mysql, $email, $password);
         break;
     default:
         $response->fail("Invalid arguments specified.");
