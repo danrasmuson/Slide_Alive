@@ -5,42 +5,20 @@
     <link href='css/login/main.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<img src="img/header.png" class="header">
-<?php
-include('include/core.php');
-include('include/login/response.php');
-include('include/login/request.php');
-include('include/login/result.php');
-
-$mysql = databaseConnect();
-
-$action = $_GET['action'];
-$password = $_POST['password'];
-$email = $_POST['email'];
-
-$response = new loginResponse();
-$request = new loginRequest();
-
-if(validateEmail($email) === false) {
-    $response->fail("Please check the values you entered for your email and try again.");
-}
-
-switch($action) {
-    case "register":
-        $loginResult = $request->registerNewUser($email, $password);
-    break;
-    case "login":
-        $loginResult = $request->loginUser($email, $password);
-    break;
-    default:
-        $response->fail("Invalid arguments specified.");
-}
-
-if($loginResult->succeeded) {
-    $response->succeed();
-} else {
-    $response->fail($loginResult->failReason);
-}
-?>
+<h3>Login</h3>
+<form name="login" action="forms/login.php?action=login" method="post">
+    Email Address: <input type="email" name="email">
+    Password: <input type="password" name="password">
+    <input type="submit" value="Submit">
+</form>
+<br>
+<h3>Register</h3>
+<form name="login" action="forms/login.php?action=register" method="post">
+    Email Address: <input type="email" name="email">
+    Password: <input type="password" name="password">
+    <input type="submit" value="Submit">
+</form>
+<br>
+<p>Note: Should be confirmation on password, client-side. Express purpose is for testing, should be replaced with something better. Remember that the login info to the database is in the github repo publicly, so accounts might get wiped at any time.</p>
 </body>
 </html>
