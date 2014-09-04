@@ -58,7 +58,7 @@
         </div>
         <div class="row">
             <div ng-repeat="image in backup[slide.number]" class="col-md-4">
-                <span ng-class="{dark: image !== slide.image}" ng-click="slide.image = image"><img src="{{slide.image}}" alt=""></span>
+                <span ng-class="{dark: image !== slide.image}" ng-click="slide.image = image"><img ng-src="{{image}}" alt=""></span>
             </div>
         </div>
     </div>
