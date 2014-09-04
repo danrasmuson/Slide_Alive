@@ -18,39 +18,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/review.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular-sanitize.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script>
-        function TodoCtrl($scope, $sce) {
-            $scope.slides = <?php
-                foreach($imageFinder->output1 as $line) {
-                    echo $line;
-                }
-            ?>;
-
-            $scope.backup = {};
-            <?php
-                foreach($imageFinder->output2 as $line) {
-                    echo $line."\n";
-                }
-            ?>
-
-            $scope.download = function(){
-                var urlArray = [];
-                var sentenceArray = [];
-                for (var i = 0; i < $scope.slides.length; i++){
-                    urlArray.push($scope.slides[i].image);
-                    sentenceArray.push($scope.slides[i].sentance);
-                }
-                window.location = "http://sa.lbsg.net/export.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
-            }
-            $scope.renderHtml = function(htmlCode) {
-                return $sce.trustAsHtml(htmlCode);
-            };
-        }
-    </script>
 </head>
 
 <body ng-app>
@@ -96,4 +64,37 @@
     </div>
 </div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular-sanitize.js"></script>
+    <script>
+        function TodoCtrl($scope, $sce) {
+            $scope.slides = <?php
+                foreach($imageFinder->output1 as $line) {
+                    echo $line;
+                }
+            ?>;
+
+            $scope.backup = {};
+            <?php
+                foreach($imageFinder->output2 as $line) {
+                    echo $line."\n";
+                }
+            ?>
+
+            $scope.download = function(){
+                var urlArray = [];
+                var sentenceArray = [];
+                for (var i = 0; i < $scope.slides.length; i++){
+                    urlArray.push($scope.slides[i].image);
+                    sentenceArray.push($scope.slides[i].sentance);
+                }
+                window.location = "http://sa.lbsg.net/export.php?args=" + JSON.stringify(urlArray) + "&sentences=" + JSON.stringify(sentenceArray);
+            }
+            $scope.renderHtml = function(htmlCode) {
+                return $sce.trustAsHtml(htmlCode);
+            };
+        }
+    </script>
 </html>
