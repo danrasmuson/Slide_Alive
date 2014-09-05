@@ -25,7 +25,7 @@ class exportJob {
             $argstr .= "/var/www/html/jobs/".$this->jobID."/image$key.jpg ".'"'.$this->sanitize($sentences[$key]).'" ';
         }
 
-        $this->cmdOutput = exec("python /var/www/include/export/make_ppt.py /var/www/html/jobs/".$this->jobID."/output.pptx $argstr");
+        $this->cmdOutput = exec("python /var/www/html/include/export/make_ppt.py /var/www/html/jobs/".$this->jobID."/output.pptx $argstr");
     }
 
     private function sanitize($input) {
