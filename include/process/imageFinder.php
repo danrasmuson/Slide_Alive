@@ -84,14 +84,11 @@ class imageFinder {
                 if(countArrayOccurences($this->sent_urls,$url) > 1) {
                     $urls = removeAllOccurrencesOf($urls,$url);
                     $urls[] = $url;
+					$this->imgurlcache[convert_number_to_words($this->done)] = $url;
                 }
             }
         }
-		$newurls = array(array());
-		foreach($urls as $url) {
-			$newurls[0][] = $url;
-		}
-        foreach($urls as $key => $value) {
+        foreach($this->imgurlcache as $key => $value) {
             $str = "";
             $str .= '$scope.backup["'.$key.'"] = [';
             if(count($value) > 0) {
