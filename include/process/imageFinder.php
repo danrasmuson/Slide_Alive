@@ -87,7 +87,7 @@ class imageFinder {
                 }
             }
         }
-        foreach($this->imgurlcache as $key => $value) {
+        foreach($urls as $key => $value) {
             $str = "";
             $str .= '$scope.backup["'.$key.'"] = [';
             if(count($value) > 0) {
