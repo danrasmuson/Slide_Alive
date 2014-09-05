@@ -17,7 +17,7 @@ class exportJob {
         exec("chmod -R 777 jobs/".$this->jobID);
 
         foreach($data as $key => $url) {
-            exec("wget ".$url." -O jobs/".$this->jobID."/image$key.jpg");
+            exec("wget ".$url." -O /var/www/html/jobs/".$this->jobID."/image$key.jpg");
         }
 
         $argstr = "";
