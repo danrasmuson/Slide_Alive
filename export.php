@@ -12,5 +12,5 @@
 
     $job = new exportJob($data,$sentences);
 
-	header("Location: http://sa.lbsg.net/jobs/".$job->jobID."/output.pptx");
+	header("Location: http://107.170.182.6/jobs/".$job->jobID."/output.pptx");
 ?>
