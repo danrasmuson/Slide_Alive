@@ -84,8 +84,8 @@ class imageFinder {
                 if(countArrayOccurences($this->sent_urls,$url) > 1) {
                     $urls = removeAllOccurrencesOf($urls,$url);
                     $urls[] = $url;
-					$this->imgurlcache[convert_number_to_words($this->done)] = $url;
                 }
+				$this->imgurlcache[convert_number_to_words($this->done)][] = $url;
             }
         }
         foreach($this->imgurlcache as $key => $value) {
