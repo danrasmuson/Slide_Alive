@@ -85,17 +85,21 @@ class imageFinder {
                     $urls = removeAllOccurrencesOf($urls,$url);
                     $urls[] = $url;
                 }
-                if(!in_array($this->imgurlcache[convert_number_to_words($this->done)],$url)) {
+                if(in_array($this->imgurlcache[convert_number_to_words($this->done)],$url) === false) {
 			$this->imgurlcache[convert_number_to_words($this->done)][] = $url;
                 }
             }
         }
+        $done = array();
         foreach($this->imgurlcache as $key => $value) {
             $str = "";
             $str .= '$scope.backup["'.$key.'"] = [';
             if(count($value) > 0) {
                 foreach($value as $val) {
-                    $str .= '"'.$val.'",';
+                	if(!in_array($done,$val)) {
+                		$done[] = $val;
+                		$str .= '"'.$val.'",';
+                	}
                 }
                 $newstr = substr($str,0,-1);
                 $newstr .= "];";
