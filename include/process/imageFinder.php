@@ -87,6 +87,10 @@ class imageFinder {
                 }
             }
         }
+		$newurls = array(array());
+		foreach($urls as $url) {
+			$newurls[0][] = $url;
+		}
         foreach($urls as $key => $value) {
             $str = "";
             $str .= '$scope.backup["'.$key.'"] = [';
